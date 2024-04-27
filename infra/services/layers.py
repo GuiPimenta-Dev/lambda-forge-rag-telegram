@@ -8,7 +8,7 @@ class Layers:
         self.langchain = _lambda.LayerVersion.from_layer_version_arn(
             scope,
             id="LangchainLayer",
-            layer_version_arn="arn:aws:lambda:us-east-2:211125768252:layer:langchain:1	",
+            layer_version_arn="arn:aws:lambda:us-east-2:211125768252:layer:langchain:1",
         )
         
         self.langchain_openai = _lambda.LayerVersion.from_layer_version_arn(
