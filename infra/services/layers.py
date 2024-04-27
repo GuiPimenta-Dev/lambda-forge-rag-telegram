@@ -20,7 +20,7 @@ class Layers:
         self.chromadb = _lambda.LayerVersion.from_layer_version_arn(
             scope,
             id="ChromaDBLayer",
-            layer_version_arn="arn:aws:lambda:us-east-2:211125768252:layer:chromadb:1",
+            layer_version_arn="arn:aws:lambda:us-east-2:211125768252:layer:chromadb:2",
         )
         
         
