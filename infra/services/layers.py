@@ -17,10 +17,16 @@ class Layers:
             layer_version_arn="arn:aws:lambda:us-east-2:211125768252:layer:langchain_openai:1",
         )
         
-        self.chromadb = _lambda.LayerVersion.from_layer_version_arn(
+        self.chromadb1 = _lambda.LayerVersion.from_layer_version_arn(
             scope,
-            id="ChromaDBLayer",
-            layer_version_arn="arn:aws:lambda:us-east-2:211125768252:layer:chromadb:1",
+            id="ChromaDB1Layer",
+            layer_version_arn="arn:aws:lambda:us-east-2:211125768252:layer:chromadb1:1",
+        )
+        
+        self.chromadb2 = _lambda.LayerVersion.from_layer_version_arn(
+            scope,
+            id="ChromaDB2Layer",
+            layer_version_arn="arn:aws:lambda:us-east-2:211125768252:layer:chromadb2:1",
         )
 
         self.chroma_layer = _lambda.LayerVersion(
@@ -31,8 +37,4 @@ class Layers:
             description='',
          )
         
-        self.fast_api_layer = _lambda.LayerVersion.from_layer_version_arn(
-            scope,
-            id='FastAPILayer',
-            layer_version_arn="arn:aws:lambda:us-east-2:770693421928:layer:Klayers-p39-fastapi:2",
-         )
+      
