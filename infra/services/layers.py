@@ -19,6 +19,20 @@ class Layers:
         
         self.chromadb = _lambda.LayerVersion.from_layer_version_arn(
             scope,
-            id="ChromaDB",
+            id="ChromaDBLayer",
             layer_version_arn="arn:aws:lambda:us-east-2:211125768252:layer:chromadb:1",
         )
+
+        self.chroma_layer = _lambda.LayerVersion(
+            scope,
+            id='ChromaLayer',
+            code=_lambda.Code.from_asset(Path.layer('layers/chroma')),
+            compatible_runtimes=[_lambda.Runtime.PYTHON_3_9],
+            description='',
+         )
+        
+        self.fast_api_layer = _lambda.LayerVersion(
+            scope,
+            id='FastAPILayer',
+            layer_version_arn="arn:aws:lambda:us-east-2:770693421928:layer:Klayers-p39-fastapi:2",
+         )
