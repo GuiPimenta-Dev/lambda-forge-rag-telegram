@@ -7,7 +7,7 @@ class QuestionConfig:
             name="Question",
             path="./functions/question",
             description="Make rag questions about lforge",
-            layers=[services.layers.chromadb1],
+            layers=[services.layers.chromadb, services.layers.langchain, services.layers.langchain_openai],
             
         )
 
